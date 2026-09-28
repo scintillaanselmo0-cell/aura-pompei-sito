@@ -74,7 +74,7 @@
     <img src="assets/img/logo-aura.png" alt="Aura Pompei" width="130" height="97" />
   </a>
   <nav class="nav" aria-label="Navigazione principale">
-    <a href="#menu">Menù</a>
+    <a href="menu.html">Menù</a>
     <a href="#galleria">Galleria</a>
     <a href="#storia">Il locale</a>
     <a href="#contatti">Contatti</a>
@@ -105,7 +105,7 @@
 
     <div class="hero-cta reveal">
       <a href="#" class="btn btn-gold" id="heroThefork" target="_blank" rel="noopener">Prenota su TheFork</a>
-      <a href="#" class="btn btn-ghost" id="heroWhatsapp" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+      <a href="#prenota" class="btn btn-ghost">Prenota su WhatsApp</a>
     </div>
   </div>
 
@@ -115,8 +115,9 @@
 <!-- ======================= EVIDENZA / SIGNATURES ======================= -->
 <section class="section signatures" id="evidenza">
   <div class="wrap">
-    <p class="eyebrow center">La nostra tavola</p>
-    <h2 class="section-title center">Tre esperienze che raccontano Aura</h2>
+    <p class="eyebrow center"><span class="num">01</span> La nostra tavola</p>
+    <h2 class="section-title center">Tre esperienze<br>che raccontano <em>Aura</em></h2>
+    <div class="ornament center" aria-hidden="true"><span></span><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2c1.6 3.5 3.2 5 6 6-2.8 1-4.4 2.5-6 6-1.6-3.5-3.2-5-6-6 2.8-1 4.4-2.5 6-6Z"/></svg><span></span></div>
     <div class="sig-grid" id="sigGrid"></div>
   </div>
 </section>
@@ -128,18 +129,21 @@
   </div>
 </section>
 
-<!-- ======================= MENU ======================= -->
-<section class="section menu" id="menu">
-  <div class="wrap">
-    <p class="eyebrow center">Carta 2026</p>
-    <h2 class="section-title center">Il Menù</h2>
-    <p class="section-lead center">Pesce crudo e cotto, carni frollate in frigovetrina, pescato del giorno.
-       I prezzi indicati con <em>/hg</em> e <em>/kg</em> si riferiscono al peso.</p>
-
-    <div class="menu-filters" id="menuFilters" role="tablist" aria-label="Filtra il menù"></div>
-    <div class="menu-cats" id="menuCats"></div>
-
-    <p class="allergen-note" id="allergenNote"></p>
+<!-- ======================= ANTEPRIMA MENÙ (link alla pagina) ======================= -->
+<section class="section menu-teaser" id="menu">
+  <div class="wrap teaser-grid">
+    <div class="teaser-media">
+      <img src="assets/img/piatto-salmone.webp" alt="Un piatto di Aura Pompei" width="1200" height="1598" loading="lazy" />
+      <span class="teaser-frame" aria-hidden="true"></span>
+    </div>
+    <div class="teaser-text">
+      <p class="eyebrow"><span class="num">02</span> La carta</p>
+      <h2 class="section-title">Il&nbsp;Menù</h2>
+      <p class="section-lead">Crudi e plateau reali, tartare e carpacci, carni Black&nbsp;Angus frollate
+         e il pescato del giorno dalla vetrina. Una carta ampia, di mare e di brace.</p>
+      <ul class="teaser-list" id="teaserList"></ul>
+      <a href="menu.html" class="btn btn-gold btn-lg">Sfoglia il menù completo →</a>
+    </div>
   </div>
 </section>
 
@@ -148,10 +152,11 @@
   <div class="wrap about-grid">
     <div class="about-media">
       <img src="assets/img/sala-vino.webp" alt="La sala di Aura Pompei" width="1200" height="1500" loading="lazy" />
+      <span class="media-frame" aria-hidden="true"></span>
     </div>
     <div class="about-text">
-      <p class="eyebrow">Il locale</p>
-      <h2 class="section-title">Elegante, ma fatto per stare bene</h2>
+      <p class="eyebrow"><span class="num">03</span> Il locale</p>
+      <h2 class="section-title">Elegante, ma fatto<br>per <em>stare bene</em></h2>
       <p>A due passi dagli Scavi di Pompei, in Via Roma, <strong>Aura</strong> è una sala curata nei
          dettagli — luci calde, un ciliegio in fiore, un servizio attento — dove la formalità
          lascia spazio al piacere di sedersi a tavola.</p>
@@ -163,7 +168,7 @@
          elegante ma rilassante.» — <span>dai nostri ospiti</span></p>
       <div class="about-cta">
         <a href="#prenota" class="btn btn-gold">Prenota</a>
-        <a href="#menu" class="btn btn-ghost">Vedi il menù</a>
+        <a href="menu.html" class="btn btn-ghost">Vedi il menù</a>
       </div>
     </div>
   </div>
@@ -173,8 +178,8 @@
 <section class="section prenota" id="prenota">
   <div class="wrap prenota-grid">
     <div class="prenota-intro">
-      <p class="eyebrow">Prenotazioni</p>
-      <h2 class="section-title">Prenota il tuo tavolo</h2>
+      <p class="eyebrow"><span class="num">04</span> Prenotazioni</p>
+      <h2 class="section-title">Prenota il tuo <em>tavolo</em></h2>
       <p>Due modi per prenotare il tuo tavolo da Aura:</p>
       <div class="prenota-options">
         <a id="prenotaThefork" href="#" target="_blank" rel="noopener" class="btn btn-gold btn-block">Prenota su TheFork ↗</a>
@@ -220,8 +225,8 @@
 <section class="section contatti" id="contatti">
   <div class="wrap contatti-grid">
     <div class="contatti-info">
-      <p class="eyebrow">Dove siamo</p>
-      <h2 class="section-title">Contatti &amp; Orari</h2>
+      <p class="eyebrow"><span class="num">05</span> Dove siamo</p>
+      <h2 class="section-title">Contatti &amp; <em>Orari</em></h2>
 
       <div class="info-block">
         <h3>Indirizzo</h3>

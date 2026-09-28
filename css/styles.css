@@ -460,3 +460,95 @@ button { font-family: inherit; cursor: pointer; }
   .marquee-track { animation-duration: 120s; }
   html { scroll-behavior: auto; }
 }
+
+/* =============================================================================
+   RIFINITURA v2 — texture, ornamenti, layout editoriale, pagina menù
+   ========================================================================== */
+
+/* --- grana/film su tutto il sito: toglie l'effetto "piatto/AI" --- */
+body::after{
+  content:""; position:fixed; inset:0; z-index:200; pointer-events:none;
+  opacity:.05; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* --- accento oro corsivo nei titoli (due tonalità = editoriale) --- */
+.section-title em{ font-style:italic; color:var(--gold); }
+
+/* --- numeretto nelle eyebrow --- */
+.eyebrow .num{
+  font-family:var(--serif); font-style:italic; font-weight:500;
+  font-size:1.35em; letter-spacing:0; margin-right:.55em;
+  color:var(--gold); opacity:.95; vertical-align:-.06em;
+}
+
+/* --- ornamento: filo oro + rombo --- */
+.ornament{ display:flex; align-items:center; gap:16px; color:var(--gold); margin:var(--s4) 0 var(--s2); }
+.ornament.center{ justify-content:center; }
+.ornament span{ height:1px; width:64px; background:linear-gradient(90deg,transparent,var(--gold)); display:block; }
+.ornament.center span:last-child{ background:linear-gradient(90deg,var(--gold),transparent); }
+.ornament svg{ flex:0 0 auto; }
+
+/* --- profondità: gradienti per sezione --- */
+.signatures{ background:radial-gradient(120% 80% at 50% -10%, rgba(203,164,78,.07), transparent 60%), linear-gradient(180deg,#151210 0%,#0f0d0b 100%); }
+.menu-teaser{ background:radial-gradient(90% 70% at 100% 0%, rgba(203,164,78,.06), transparent 55%), var(--bg); }
+.about{ background:linear-gradient(180deg,#0d0d0d,#121010); }
+.prenota{ background:radial-gradient(100% 80% at 0% 0%, rgba(203,164,78,.05), transparent 55%), var(--bg-2); }
+
+.btn-lg{ padding:1.1rem 2.1rem; font-size:.82rem; margin-top:var(--s5); }
+
+/* --- SIGNATURES più curate/asimmetriche --- */
+.sig-card{ min-height:420px; }
+.sig-num{
+  position:absolute; top:16px; right:18px; z-index:3;
+  font-family:var(--serif); font-style:italic; font-size:1.5rem; color:var(--gold);
+  text-shadow:0 2px 10px rgba(0,0,0,.6);
+}
+.sig-body h3{ position:relative; padding-bottom:.6rem; }
+.sig-body h3::after{ content:""; position:absolute; left:0; bottom:0; width:34px; height:2px; background:var(--gold-grad); }
+
+/* --- cornici oro sfalsate sulle immagini --- */
+.about-media, .teaser-media{ position:relative; overflow:visible; border:0; }
+.about-media img, .teaser-media img{ border-radius:4px; position:relative; z-index:1; box-shadow:0 24px 60px -30px rgba(0,0,0,.9); }
+.media-frame, .teaser-frame{
+  content:""; position:absolute; z-index:0; border:1px solid var(--gold); border-radius:4px;
+  inset:18px -18px -18px 18px; opacity:.55;
+}
+.teaser-frame{ inset:-18px 18px 18px -18px; }
+
+/* --- TEASER MENÙ (home) --- */
+.teaser-grid{ display:grid; gap:var(--s7); align-items:center; }
+.teaser-media{ order:-1; }
+.teaser-list{ margin:var(--s5) 0 var(--s2); display:grid; }
+.teaser-row{ display:grid; grid-template-columns:auto 1fr; gap:.2rem 1rem; align-items:baseline;
+  padding:.75rem 0; border-bottom:1px solid var(--line-soft); }
+.teaser-row:first-child{ border-top:1px solid var(--line-soft); }
+.teaser-cat{ font-family:var(--serif); font-size:1.2rem; color:var(--gold); white-space:nowrap; }
+.teaser-items{ color:var(--muted); font-size:.84rem; line-height:1.45; }
+
+/* --- PAGINA MENÙ --- */
+body.page-menu{ padding-top:var(--header-h); }
+.menu-hero{
+  padding:var(--s7) 0 var(--s5);
+  background:radial-gradient(120% 90% at 50% -20%, rgba(203,164,78,.10), transparent 60%), var(--bg-2);
+  border-bottom:1px solid var(--line-soft); text-align:center;
+}
+.menu-hero .wrap{ position:relative; }
+.back-link{ display:block; text-align:left; margin-bottom:var(--s5); color:var(--muted);
+  font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; }
+.back-link:hover{ color:var(--gold); }
+.page-menu .menu{ background:var(--bg); }
+.page-menu .menu-filters{
+  position:sticky; top:var(--header-h); z-index:40; margin-top:0;
+  padding:var(--s4) 0; background:rgba(13,13,13,.9); backdrop-filter:blur(10px);
+}
+.menu-foot{ margin-top:var(--s8); padding-top:var(--s6); border-top:1px solid var(--line);
+  display:flex; gap:var(--s3); flex-wrap:wrap; justify-content:center; }
+
+@media (min-width:860px){
+  .teaser-grid{ grid-template-columns:1.05fr 1fr; gap:var(--s9); }
+  .teaser-media{ order:1; }              /* immagine a destra sul desktop */
+  .sig-grid .sig-card:nth-child(2){ transform:translateY(-28px); }
+  .sig-grid .sig-card:nth-child(2):hover{ transform:translateY(-32px); }
+  .back-link{ position:absolute; left:0; top:.1rem; margin:0; }
+}
