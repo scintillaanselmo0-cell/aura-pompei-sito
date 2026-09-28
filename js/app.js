@@ -18,8 +18,13 @@
   /* ---------------------------------------------------------------- HERO */
   $("#heroHook").textContent = B.hook;
   const telHref = "tel:" + B.phone.tel;
-  $("#heroCall").href = telHref;
   $("#sbCall").href = telHref;
+
+  // CTA hero: due modi chiari di prenotare
+  const waPrenota = "https://wa.me/" + B.whatsapp + "?text=" +
+    encodeURIComponent("Ciao Aura, vorrei prenotare un tavolo per…");
+  if ($("#heroThefork"))  $("#heroThefork").href  = B.thefork;
+  if ($("#heroWhatsapp")) $("#heroWhatsapp").href = waPrenota;
 
   // rating
   if (B.rating) {
