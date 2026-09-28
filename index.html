@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Aura Pompei — Fish &amp; Steak | Ristorante di pesce e carne a Pompei</title>
+<meta name="description" content="Aura Pompei, Fish &amp; Steak in Via Roma 91. Crudi di mare, plateau reali, carni Black Angus frollate e pescato del giorno. Aperto tutti i giorni 11:30–23:30. Prenota su WhatsApp." />
+<meta name="theme-color" content="#0D0D0D" />
+<link rel="canonical" href="https://www.aurapompei.it/" />
+<link rel="icon" href="assets/img/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="assets/img/favicon.png" />
+
+<!-- Open Graph / social (WhatsApp, Instagram, Facebook) -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Aura Pompei — Fish &amp; Steak" />
+<meta property="og:description" content="Crudi di mare, carni frollate e pescato del giorno. Cucina d'autore a Pompei. Aperto tutti i giorni 11:30–23:30." />
+<meta property="og:image" content="assets/img/og-image.jpg" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:url" content="https://www.aurapompei.it/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Font: Cormorant Garamond (display) + Inter (testo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+
+<!-- SEO locale: schema.org Restaurant -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Aura Pompei — Fish & Steak",
+  "image": "https://www.aurapompei.it/assets/img/og-image.jpg",
+  "url": "https://www.aurapompei.it/",
+  "servesCuisine": ["Pesce", "Carne alla brace", "Italiana", "Campana"],
+  "priceRange": "€€€",
+  "telephone": "+390816126264",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Roma, 91",
+    "postalCode": "80045",
+    "addressLocality": "Pompei",
+    "addressRegion": "NA",
+    "addressCountry": "IT"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 40.7466, "longitude": 14.4989 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "11:30", "closes": "23:30"
+  }],
+  "menu": "https://www.aurapompei.it/#menu",
+  "sameAs": [
+    "https://www.instagram.com/aurapompei/",
+    "https://www.facebook.com/aurafishandsteakpompei/",
+    "https://www.tiktok.com/@aura.pompei.fish"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "9.2", "bestRating": "10", "ratingCount": "25"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header class="site-header" id="top">
+  <a href="#top" class="brand" aria-label="Aura Pompei — Fish & Steak">
+    <img src="assets/img/logo-aura.webp" alt="Aura Pompei" width="130" height="99" />
+  </a>
+  <nav class="nav" aria-label="Navigazione principale">
+    <a href="#menu">Menù</a>
+    <a href="#galleria">Galleria</a>
+    <a href="#storia">Il locale</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+  <a href="#prenota" class="btn btn-gold btn-sm nav-cta">Prenota</a>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+         poster="assets/img/hero-poster.webp">
+    <source src="assets/video/aura-hero.webm" type="video/webm" />
+    <source src="assets/video/aura-hero.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Pompei · Via Roma 91</p>
+    <h1 class="hero-title reveal">
+      <span class="hero-name">AURA</span>
+      <span class="hero-sub">Fish &amp; Steak</span>
+    </h1>
+    <p class="hero-hook reveal" id="heroHook"></p>
+
+    <div class="hero-status reveal">
+      <span class="status-pill" id="heroStatus" aria-live="polite"></span>
+      <span class="rating-pill" id="heroRating"></span>
+    </div>
+
+    <div class="hero-cta reveal">
+      <a href="#prenota" class="btn btn-gold">Prenota un tavolo</a>
+      <a href="#" class="btn btn-ghost" id="heroCall">Chiama</a>
+    </div>
+  </div>
+
+  <a href="#evidenza" class="hero-scroll" aria-label="Scorri">↓</a>
+</section>
+
+<!-- ======================= EVIDENZA / SIGNATURES ======================= -->
+<section class="section signatures" id="evidenza">
+  <div class="wrap">
+    <p class="eyebrow center">La nostra tavola</p>
+    <h2 class="section-title center">Tre esperienze che raccontano Aura</h2>
+    <div class="sig-grid" id="sigGrid"></div>
+  </div>
+</section>
+
+<!-- ======================= GALLERIA (scorre da sola) ======================= -->
+<section class="gallery-section" id="galleria" aria-label="Galleria fotografica">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+</section>
+
+<!-- ======================= MENU ======================= -->
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <p class="eyebrow center">Carta 2026</p>
+    <h2 class="section-title center">Il Menù</h2>
+    <p class="section-lead center">Pesce crudo e cotto, carni frollate in frigovetrina, pescato del giorno.
+       I prezzi indicati con <em>/hg</em> e <em>/kg</em> si riferiscono al peso.</p>
+
+    <div class="menu-filters" id="menuFilters" role="tablist" aria-label="Filtra il menù"></div>
+    <div class="menu-cats" id="menuCats"></div>
+
+    <p class="allergen-note" id="allergenNote"></p>
+  </div>
+</section>
+
+<!-- ======================= STORIA / ABOUT ======================= -->
+<section class="section about" id="storia">
+  <div class="wrap about-grid">
+    <div class="about-media">
+      <img src="assets/img/sala-vino.webp" alt="La sala di Aura Pompei" width="1200" height="1500" loading="lazy" />
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">Il locale</p>
+      <h2 class="section-title">Elegante, ma fatto per stare bene</h2>
+      <p>A due passi dagli Scavi di Pompei, in Via Roma, <strong>Aura</strong> è una sala curata nei
+         dettagli — luci calde, un ciliegio in fiore, un servizio attento — dove la formalità
+         lascia spazio al piacere di sedersi a tavola.</p>
+      <p>La nostra è una cucina di <strong>mare e di brace</strong>: crudi e plateau reali per
+         cominciare, carni Black Angus <strong>Creekstone Farms®</strong> frollate in cella dedicata,
+         e il <strong>pescato del giorno</strong> che scegli dalla vetrina e noi cuciniamo al kamado o
+         al naturale. Materia prima prima di tutto, presentata con misura.</p>
+      <p class="about-quote">«Pesce freschissimo e primi eseguiti con cura, in un ambiente
+         elegante ma rilassante.» — <span>dai nostri ospiti</span></p>
+      <div class="about-cta">
+        <a href="#prenota" class="btn btn-gold">Prenota</a>
+        <a href="#menu" class="btn btn-ghost">Vedi il menù</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRENOTA ======================= -->
+<section class="section prenota" id="prenota">
+  <div class="wrap prenota-grid">
+    <div class="prenota-intro">
+      <p class="eyebrow">Prenotazioni</p>
+      <h2 class="section-title">Prenota il tuo tavolo</h2>
+      <p>Compila i campi: apriremo <strong>WhatsApp</strong> con il messaggio già pronto,
+         dovrai solo premere invio. Ti confermeremo il tavolo in chat.</p>
+      <ul class="prenota-alt">
+        <li><a id="prenotaThefork" href="#" target="_blank" rel="noopener">Prenota online su TheFork ↗</a></li>
+        <li><a id="prenotaCall" href="#">Preferisci chiamare? <span></span></a></li>
+      </ul>
+    </div>
+
+    <form class="booking" id="bookingForm" novalidate>
+      <div class="field">
+        <label for="bkNome">Nome</label>
+        <input type="text" id="bkNome" name="nome" autocomplete="name" placeholder="Il tuo nome" required />
+        <small class="error" data-for="bkNome"></small>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="bkPersone">Persone</label>
+          <input type="number" id="bkPersone" name="persone" min="1" max="20" step="1" placeholder="2" required />
+          <small class="error" data-for="bkPersone"></small>
+        </div>
+        <div class="field">
+          <label for="bkData">Data</label>
+          <input type="date" id="bkData" name="data" required />
+          <small class="error" data-for="bkData"></small>
+        </div>
+      </div>
+      <div class="field">
+        <label for="bkOrario">Orario</label>
+        <select id="bkOrario" name="orario" required>
+          <option value="" disabled selected>Scegli un orario</option>
+        </select>
+        <small class="error" data-for="bkOrario"></small>
+      </div>
+      <button type="submit" class="btn btn-gold btn-block">Prenota su WhatsApp</button>
+      <p class="booking-confirm" id="bookingConfirm" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- ======================= CONTATTI ======================= -->
+<section class="section contatti" id="contatti">
+  <div class="wrap contatti-grid">
+    <div class="contatti-info">
+      <p class="eyebrow">Dove siamo</p>
+      <h2 class="section-title">Contatti &amp; Orari</h2>
+
+      <div class="info-block">
+        <h3>Indirizzo</h3>
+        <p id="cAddress"></p>
+        <a id="cMaps" href="#" target="_blank" rel="noopener" class="link-gold">Indicazioni stradali ↗</a>
+      </div>
+
+      <div class="info-block">
+        <h3>Orari <span class="status-pill sm" id="cStatus"></span></h3>
+        <table class="hours" id="hoursTable"></table>
+      </div>
+
+      <div class="info-block">
+        <h3>Chiamaci / Scrivici</h3>
+        <p class="contact-lines">
+          <a id="cPhone" href="#" class="link-gold"></a>
+          <a id="cWhatsapp" href="#" target="_blank" rel="noopener" class="link-gold">WhatsApp</a>
+        </p>
+        <div class="socials" id="socials"></div>
+      </div>
+    </div>
+
+    <div class="contatti-map">
+      <iframe id="mapFrame" title="Mappa Aura Pompei" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <img src="assets/img/logo-aura.webp" alt="Aura Pompei" width="110" height="84" class="footer-logo" />
+    <p class="footer-tag">Fish &amp; Steak · Via Roma 91, Pompei (NA)</p>
+    <nav class="footer-nav" aria-label="Navigazione footer">
+      <a href="#menu">Menù</a>
+      <a href="#prenota">Prenota</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <p class="footer-copy">© <span id="year"></span> Aura Pompei — Fish &amp; Steak. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<!-- ======================= BARRA STICKY MOBILE ======================= -->
+<div class="sticky-bar" aria-label="Azioni rapide">
+  <a href="#" class="sb-btn sb-call" id="sbCall">
+    <span class="sb-ico">✆</span> Chiama
+  </a>
+  <a href="#prenota" class="sb-btn sb-book">
+    <span class="sb-ico">✦</span> Prenota
+  </a>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+AURA POMPEI — Fish & Steak · Sito web
+=====================================
+
+COM'È FATTO
+-----------
+Sito statico (HTML + CSS + JavaScript puro). Nessun server, nessun backend.
+Si pubblica così com'è su GitHub Pages, Netlify o qualsiasi hosting statico.
+
+  index.html            → la pagina
+  css/styles.css        → grafica
+  js/data.js            → *** TUTTI I DATI: menù, prezzi, orari, contatti ***
+  js/app.js             → logica (non serve toccarlo)
+  assets/img/           → foto, logo, poster (WebP ottimizzati)
+  assets/video/         → video di sfondo (mp4 + webm)
+
+MODIFICARE MENÙ, PREZZI, ORARI, CONTATTI
+----------------------------------------
+Apri SOLO  js/data.js  con un editor di testo.
+- Cambiare un prezzo: modifica il valore tra virgolette, es.  price: "18€"
+- Aggiungere un piatto: copia una riga { name: ..., price: ... } e incollala.
+- Orari: sezione "hours" (formato 24h). "Aperto ora" si aggiorna da solo.
+- Telefono / WhatsApp / social / TheFork: sezione "business".
+Salvi il file → il sito è aggiornato. Non serve toccare HTML o CSS.
+
+DA VERIFICARE (segnalati nel file data.js con [DA VERIFICARE])
+-------------------------------------------------------------
+1. Numero WhatsApp: ora è il fisso 390816126264. Se usi un cellulare
+   aziendale, sostituiscilo in  business.whatsapp  (formato internazionale
+   senza "+" e senza spazi, es. 393401234567).
+2. "Primo di mare del giorno" (categoria Primi di mare): una riga del menù
+   TheFork era illeggibile nel PDF. Correggi nome e prezzo in data.js.
+3. Coordinate mappa (business.address.lat/lng): approssimate su Via Roma.
+
+PUBBLICARE SU GITHUB PAGES
+--------------------------
+1. Crea un repository e carica tutti questi file nella radice.
+2. Settings → Pages → Branch: main / root → Save.
+3. Il sito sarà online all'indirizzo che GitHub ti mostra.
+   (Per il dominio aurapompei.it: Settings → Pages → Custom domain.)
