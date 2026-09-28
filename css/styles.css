@@ -509,7 +509,7 @@ body::after{
 
 /* --- cornici oro sfalsate sulle immagini --- */
 .about-media, .teaser-media{ position:relative; overflow:visible; border:0; }
-.about-media img, .teaser-media img{ border-radius:4px; position:relative; z-index:1; box-shadow:0 24px 60px -30px rgba(0,0,0,.9); }
+.about-media img, .teaser-media img{ width:100%; height:auto; display:block; border-radius:4px; position:relative; z-index:1; box-shadow:0 24px 60px -30px rgba(0,0,0,.9); }
 .media-frame, .teaser-frame{
   content:""; position:absolute; z-index:0; border:1px solid var(--gold); border-radius:4px;
   inset:18px -18px -18px 18px; opacity:.55;
